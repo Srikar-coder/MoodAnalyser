@@ -1,4 +1,4 @@
-package com.moodAnalyser;
+package com.moodanalyser;
 
 public class MoodAnalyser {
 
@@ -9,19 +9,15 @@ public class MoodAnalyser {
         this.message = message;
     }
 
-    public String analyseMood(String message) throws MoodAnalysisException {
+    public String MoodAnalyser(String message) {
         this.message = message;
         return analyseMood();
     }
 
-    public String analyseMood() throws MoodAnalysisException {
-        try {
-            if (message.contains("SAD"))
-                return "SAD";
-            else
-                return "HAPPY";
-        } catch (NullPointerException e) {
-            throw new MoodAnalysisException("Please Enter a Proper Message");
-        }
+    public String analyseMood() {
+        if (message.contains("SAD"))
+            return "SAD";
+        else
+            return "HAPPY";
     }
 }
